@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Touch1 from './touch1.png';
+import Touch2 from './touch2.png';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}> 
+        this is mips 
+      </h1>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <img src={Touch1} 
+        onMouseOver={e => (e.currentTarget.src = Touch2)}
+        onMouseOut={e => (e.currentTarget.src = Touch1)}/>
+      </div>
+      <h3 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontStyle:'italic' }}> 
+        touch him 
+      </h3>
+    </>
   );
 }
+
 
 export default App;
